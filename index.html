@@ -7,37 +7,123 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="fixed-header">
+      <h1 class="logo">Astrospace</h1>
+      <div class="header-buttons">
+        <button class="info-btn" aria-label="Information">
+          <span>i</span>
+        </button>
+        <button class="menu-btn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
     <div class="outer-wrapper">
       <div class="wrapper">
         <div class="slide one">
-          <h1>Välkommen</h1>
-          <p>Upptäck en ny värld av möjligheter genom innovativ webbdesign</p>
           <div class="content-box">
-            <p>Scrolla för att utforska mer →</p>
+            <h1>Roots Among Stars</h1>
+            <p>
+              Where the tree keeps its secrets and the void keeps yours — a
+              stillness that remembers how to be small beneath the sky. In this
+              vast expanse, branches reach like ancient questions toward stars
+              that answer in whispers of light. Each leaf holds a fragment of
+              tomorrow's dreams, while roots dig deep into the stories of what
+              we once were. Here, in the space between earth and endless night,
+              we learn to breathe in possibilities and exhale our fears into the
+              cosmic dance.
+            </p>
+            <a class="btn" href="#">Drift Away</a>
           </div>
         </div>
         <div class="slide two">
-          <h1>Våra Tjänster</h1>
-          <p>Skräddarsydda digitala lösningar för din verksamhet</p>
           <div class="content-box">
-            <p>Webbdesign<br />Utveckling<br />Digital Strategi</p>
-          </div>
-        </div>
-        <div class="slide three">
-          <h1>Portfolio</h1>
-          <p>Se några av våra senaste projekt</p>
-          <div class="content-box">
-            <p>Över 50+ framgångsrika projekt levererade</p>
+            <div class="content-row">
+              <div class="content-left">
+                <h1>The Long Quiet</h1>
+                <p>
+                  An astronaut stares outward and learns the language of
+                  distance — soft, precise, and full of things we cannot carry
+                  home. He catalogues small silences, counts the daylight that
+                  does not belong to him, and keeps a careful ledger of loss. He
+                  remembers the weight of a doorway and the way a kitchen smells
+                  like other people's mornings. In the long quiet there is an
+                  odd comfort: an enormous room where one can breathe slowly and
+                  listen for the pulse that is still human.
+                </p>
+                <p class="aside">
+                  — a note folded into the spaces between stars
+                </p>
+              </div>
+              <img class="side-img" src="imgs/bg4.jpg" alt="side image" />
+            </div>
           </div>
         </div>
         <div class="slide four">
-          <h1>Kontakt</h1>
-          <p>Låt oss skapa något fantastiskt tillsammans</p>
           <div class="content-box">
-            <p>info@exempel.se<br />070-123 45 67</p>
+            <div class="content-row">
+              <div class="content-left">
+                <h1>Choose Your Destination</h1>
+                <p>
+                  In the grand tapestry of space, each point of light beckons
+                  with its own story. Here, among the celestial paths less
+                  traveled, lie worlds waiting to be discovered. Some shimmer
+                  with the crystalline beauty of frozen methane seas, others
+                  pulse with the warmth of twin suns dancing their eternal
+                  waltz. Choose your journey through the cosmic archipelago,
+                  where each destination is a new chapter in the story of
+                  exploration, and every arrival marks the beginning of another
+                  magnificent departure.
+                </p>
+                <p class="aside">
+                  Every star holds a promise; every planet, a possibility.
+                </p>
+              </div>
+              <div class="destination-images">
+                <img src="imgs/bg6.jpg" alt="Destination 1" class="dest-img" />
+                <img src="imgs/bg7.jpg" alt="Destination 2" class="dest-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide three">
+          <div class="content-box">
+            <div class="content-row">
+              <div class="content-left">
+                <h1>Lunar Echoes</h1>
+                <p>
+                  The moon keeps time for those who listen; its pale circles are
+                  the memory of gentle departures and small returns. It hangs
+                  like a patient wound, luminous and tireless, tracing the arc
+                  of absent people and anonymous wishes. We press our faces to
+                  the night and trade our names with its craters, hoping for a
+                  ledger that remembers us kindly, even if we are only passing
+                  notes across a darkened room.
+                </p>
+                <p class="muted">Listen closely, the silence answers.</p>
+              </div>
+              <aside class="side-panel">
+                <form class="fake-form" onsubmit="return false;">
+                  <label>Name</label>
+                  <input type="text" placeholder="Your name" />
+                  <label>Email</label>
+                  <input type="email" placeholder="you@where.example" />
+                  <label>Message</label>
+                  <textarea placeholder="A short note..."></textarea>
+                  <button class="btn" type="submit">Send</button>
+                </form>
+              </aside>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

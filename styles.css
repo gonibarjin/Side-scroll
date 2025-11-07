@@ -1,44 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", "Playfair Display", sans-serif;
 }
 
 .slide {
   width: 100vw;
   height: 100vh;
-  padding: 2rem;
+  padding-left: clamp(2rem, 8vw, 6rem);
+  padding-top: clamp(8rem, 15vh, 12rem);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .slide h1 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
 }
 
 .slide p {
-  font-size: 1.5rem;
-  max-width: 600px;
-  text-align: center;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  max-width: 640px;
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .content-box {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-  margin-top: 2rem;
-  transform: translateY(20px);
-  opacity: 0;
-  animation: fadeUp 0.8s ease forwards;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  margin-top: 0;
+  transform: translateY(0);
+  opacity: 1;
+  width: 100%;
+}
+
+.content-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.content-left {
+  flex: 1 1 55%;
+}
+
+.side-img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  flex: 0 0 320px;
+  transition: transform 300ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.side-panel {
+  flex: 0 0 320px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.fake-form label {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
+  opacity: 0.9;
+}
+
+.fake-form input,
+.fake-form textarea,
+.fake-form button {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.fake-form button.btn {
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  box-shadow: 0 6px 18px rgba(37, 117, 252, 0.25);
+  cursor: pointer;
+}
+
+.fake-form textarea {
+  min-height: 80px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  box-shadow: 0 6px 18px rgba(37, 117, 252, 0.25);
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.aside {
+  margin-top: 0.6rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.muted {
+  margin-top: 0.6rem;
+  opacity: 0.9;
 }
 
 .wrapper {
@@ -50,19 +148,161 @@ body {
 }
 
 .one {
-  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  background-image: linear-gradient(
+      180deg,
+      rgba(10, 18, 30, 0.45),
+      rgba(10, 18, 30, 0.35)
+    ),
+    url("imgs/bg1.jpg");
 }
 
 .two {
-  background: linear-gradient(135deg, #2c3e50 0%, #27ae60 100%);
-}
-
-.three {
-  background: linear-gradient(135deg, #2c3e50 0%, #8e44ad 100%);
+  background-image: linear-gradient(
+      180deg,
+      rgba(6, 10, 20, 0.45),
+      rgba(6, 10, 20, 0.35)
+    ),
+    url("imgs/bg2.jpg");
+  background-position: center 130%;
 }
 
 .four {
-  background: linear-gradient(135deg, #2c3e50 0%, #e74c3c 100%);
+  background-image: linear-gradient(
+      180deg,
+      rgba(4, 9, 19, 0.45),
+      rgba(4, 9, 19, 0.35)
+    ),
+    url("imgs/bg5.jpg");
+  background-position: center;
+}
+
+.three {
+  background-image: linear-gradient(
+      180deg,
+      rgba(2, 8, 18, 0.45),
+      rgba(2, 8, 18, 0.35)
+    ),
+    url("imgs/bg3.jpg");
+  background-position: center 20%;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-buttons {
+  position: absolute;
+  right: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.info-btn,
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.info-btn:hover,
+.menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.info-btn span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+}
+
+.menu-btn {
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-btn span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.destination-images {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 0 0 300px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.dest-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  display: block;
+}
+
+.dest-img:hover {
+  transform: translateX(-10px) scale(1.04);
+}
+
+/* Hover / focus growth for all main content images */
+.side-img:hover,
+.dest-img:hover,
+.side-img:focus,
+.dest-img:focus {
+  transform: scale(1.04);
+}
+
+/* Keyboard accessibility: visible focus ring */
+.side-img:focus-visible,
+.dest-img:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 6px;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .side-img,
+  .dest-img {
+    transition: none !important;
+    transform: none !important;
+    will-change: auto;
+  }
 }
 
 @keyframes fadeUp {
