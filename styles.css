@@ -278,7 +278,6 @@ body {
   transform: translateX(-10px) scale(1.04);
 }
 
-/* Hover / focus growth for all main content images */
 .side-img:hover,
 .dest-img:hover,
 .side-img:focus,
@@ -286,14 +285,12 @@ body {
   transform: scale(1.04);
 }
 
-/* Keyboard accessibility: visible focus ring */
 .side-img:focus-visible,
 .dest-img:focus-visible {
   outline: 3px solid rgba(255, 255, 255, 0.12);
   outline-offset: 6px;
 }
 
-/* Respect user preference for reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .side-img,
   .dest-img {
